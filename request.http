@@ -1,0 +1,134 @@
+GET https://ap-sever.herokuapp.com/class
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTdjZWZiOWI2ODI5MzE5OTY0ZGVkMTciLCJpYXQiOjE2MzY3Mjc4MzF9.16xWSBBNNoHdCwSnYtBoFgsqnnujvtyBknk6Ry6c_9c
+Content-Type: application/json
+
+###
+GET https://ap-sever.herokuapp.com/users?page=1&limit=8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWEzM2U2ZjVjMThjMTQ3YmM2NjIwY2IiLCJpYXQiOjE2MzgyNTY3ODh9.IxJ8L2gd9wRGe2Cv-myFp-ReZbQVzn-q248S1-fC_Wk
+###
+GET  https://ap-sever.herokuapp.com/users/find/617d04e40682a0a38c0421ca
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWEzM2U2ZjVjMThjMTQ3YmM2NjIwY2IiLCJpYXQiOjE2MzgyNTY3ODh9.IxJ8L2gd9wRGe2Cv-myFp-ReZbQVzn-q248S1-fC_Wk
+###
+
+POST  https://ap-sever.herokuapp.com/users/store
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTdjZWZiOWI2ODI5MzE5OTY0ZGVkMTciLCJpYXQiOjE2MzY3Mjc4MzF9.16xWSBBNNoHdCwSnYtBoFgsqnnujvtyBknk6Ry6c_9c
+Content-Type: application/json
+
+{
+    "fullName": "testt",
+    "username": "tesst",
+    "password": "tesst",
+    "userCode": "test",
+    "email": "tesst@gmail.com",
+    "phone": "tesst",
+    "address": "tesst",
+    "gender": "Nam",
+    "rolesId": "617ce9b1ad1d4cf09c207337",
+    "majorsId": "617d7aa1c5c0dfd2a8714e06"
+}
+
+###
+
+PUT https://ap-sever.herokuapp.com/users/618f5e0cc374fbbfccfe8b84
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTdjZWZiOWI2ODI5MzE5OTY0ZGVkMTciLCJpYXQiOjE2MzY3Mjc4MzF9.16xWSBBNNoHdCwSnYtBoFgsqnnujvtyBknk6Ry6c_9c
+Content-Type: application/json
+
+{
+    "fullName": "dcm tung",
+    "username": "tesst",
+    "password": "tesst",
+    "userCode": "test",
+    "email": "tesst@gmail.com",
+    "phone": "tesst",
+    "address": "tesst",
+    "nationality": "Việt Nam",
+    "gender": "Nam",
+    "DoB": "13/07/2001",
+    "rolesId": "617ce9b1ad1d4cf09c207337",
+    "majorsId": "617d7aa1c5c0dfd2a8714e06"
+}
+
+###
+
+DELETE https://ap-sever.herokuapp.com/users/618e7e8c4a740437204c89be
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTdjZWZiOWI2ODI5MzE5OTY0ZGVkMTciLCJpYXQiOjE2MzY3Mjc4MzF9.16xWSBBNNoHdCwSnYtBoFgsqnnujvtyBknk6Ry6c_9c
+
+###
+
+GET  https://ap-sever.herokuapp.com/scores
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTdjZWZiOWI2ODI5MzE5OTY0ZGVkMTciLCJpYXQiOjE2MzY3Mjc4MzF9.16xWSBBNNoHdCwSnYtBoFgsqnnujvtyBknk6Ry6c_9c
+###
+
+GET  https://ap-sever.herokuapp.com/scores/61821b32e2c474ccfd471a7c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTdkMDY3ODFjMzFjNTE1YWVlYWNmOGIiLCJpYXQiOjE2Mzc1OTM4MzF9._k0JX5ecI_LmNE1br9q2APjMk1GznrIJRY4SXNLeYuE
+
+###
+GET https://ap-sever.herokuapp.com/class/61b419bef481ac8039ea7312
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWIxYTczNjk0YWIwMDA5ZTk2MWIxYzgiLCJpYXQiOjE2Mzk4OTgxMTF9.2PH3pQvcWfIiJ5KHRktkfM98n3fquS6xIQ5uxzCsojk
+###
+GET  https://ap-sever.herokuapp.com/scores/user/61821b32e2c474ccfd471a7c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTdjZWZiOWI2ODI5MzE5OTY0ZGVkMTciLCJpYXQiOjE2MzY3Mjc4MzF9.16xWSBBNNoHdCwSnYtBoFgsqnnujvtyBknk6Ry6c_9c
+###
+
+POST https://ap-sever.herokuapp.com/courses/store
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTdjZWZiOWI2ODI5MzE5OTY0ZGVkMTciLCJpYXQiOjE2MzY3Mjc4MzF9.16xWSBBNNoHdCwSnYtBoFgsqnnujvtyBknk6Ry6c_9c
+Content-Type: application/json
+
+{
+"description": "test",
+"image": "1636182023282.jpg",
+"level": "test",
+"majorsId": "617d7aa1c5c0dfd2a8714e06",
+"name": "test",
+}
+
+
+###
+GET https://ap-sever.herokuapp.com/courses?page=1&limit=1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWEzM2U2ZjVjMThjMTQ3YmM2NjIwY2IiLCJpYXQiOjE2MzgyNTY3ODh9.IxJ8L2gd9wRGe2Cv-myFp-ReZbQVzn-q248S1-fC_Wk
+Content-Type: application/json
+
+###
+GET  https://ap-sever.herokuapp.com/schedules/61821b32e2c474ccfd471a7c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTdjZWZiOWI2ODI5MzE5OTY0ZGVkMTciLCJpYXQiOjE2MzY3Mjc4MzF9.16xWSBBNNoHdCwSnYtBoFgsqnnujvtyBknk6Ry6c_9c
+
+###
+GET  https://ap-sever.herokuapp.com/users/search?keySearch=huan
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWEzM2U2ZjVjMThjMTQ3YmM2NjIwY2IiLCJpYXQiOjE2MzgyNTY3ODh9.IxJ8L2gd9wRGe2Cv-myFp-ReZbQVzn-q248S1-fC_Wk
+
+###
+GET  https://ap-sever.herokuapp.com/class/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWIxYTczNjk0YWIwMDA5ZTk2MWIxYzgiLCJpYXQiOjE2MzkxOTMwNDN9.GPI6swcr6wI9dgr0HUDuB68JFTBcHudNZRbqju7Fzqo
+
+###
+PATCH https://ap-sever.herokuapp.com/class/remove/student/61a8534bd6e0b60db2f1939a
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWEzM2U2ZjVjMThjMTQ3YmM2NjIwY2IiLCJpYXQiOjE2MzgyNTY3ODh9.IxJ8L2gd9wRGe2Cv-myFp-ReZbQVzn-q248S1-fC_Wk
+Content-Type: application/json
+
+{
+    "studentId": ["61a33f44e09f58a890baacf3"]
+}
+
+###
+GET https://ap-sever.herokuapp.com/users/personal/61a744c187f06b757d6d60c2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWEzM2U2ZjVjMThjMTQ3YmM2NjIwY2IiLCJpYXQiOjE2MzgyNTY3ODh9.IxJ8L2gd9wRGe2Cv-myFp-ReZbQVzn-q248S1-fC_Wk
+
+### 
+PUT https://ap-sever.herokuapp.com/users/update/infomation
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWIxYTczNjk0YWIwMDA5ZTk2MWIxYzgiLCJpYXQiOjE2MzkwMzI2NDl9.z4GfBBxDmgV5nCBJXfbwDakfCgigH14SXTniDb1Wib8
+Content-Type: application/json
+
+{
+    "DoB": "2001-09-09T00:00:00.000Z",
+    "address": "107 Nguyen Phong Sac",
+    "email": "hungpvwebdev@gmail.com",
+    "fullName": "Pham",
+    "gender": "male",
+    "nationality": "Viet Nam",
+    "phone": "0799212901",
+    "avatar": "1635613378178.jpg",
+    "userCode": "FSST-0020",
+    "username": "hung123",
+    "password": "123"
+}
