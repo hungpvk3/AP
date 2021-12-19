@@ -86,7 +86,7 @@ const AdminPage = () => {
                             />
                             <Card
                                 name={"Khoá học hiện có"}
-                                total={majors.length}
+                                total={majors?.length}
                                 icon={
                                     <path
                                         strokeLinecap="round"
