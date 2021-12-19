@@ -23,7 +23,7 @@ const CategoryPage = () => {
                     <div className="mt-16">
                         <div>
                             <div className="grid xl:grid-cols-4 lg:grid-cols-2">
-                                {majors.map((major) => (
+                                {majors?.map((major) => (
                                     <div key={major._id} className="mx-auto">
                                         <Link to={"categories/" + major.slug}>
                                             <Card

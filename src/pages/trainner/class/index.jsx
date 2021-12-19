@@ -46,6 +46,7 @@ const ClassTrainnerPage = () => {
                             <div key={cls._id}>
                                 <ClassItem
                                     path={cls._id}
+                                    classCode={cls.classCode}
                                     name={cls.classCode}
                                     nameCourse={cls.name}
                                 />

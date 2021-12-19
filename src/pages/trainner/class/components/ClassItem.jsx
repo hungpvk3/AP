@@ -4,7 +4,7 @@ import { Popover, Button } from "antd";
 
 import { PATH } from "../../../../contants/PATH";
 
-const ClassItem = ({ path, name, nameCourse }) => {
+const ClassItem = ({ path, name, nameCourse, classCode }) => {
     return (
         <div className="flex items-center px-5 border border-gray-400 bg-gray-100 rounded-xl">
             <p className=" pt-3 ">{name}</p>
@@ -14,7 +14,7 @@ const ClassItem = ({ path, name, nameCourse }) => {
                 placement="bottomRight"
                 content={
                     <div className="flex flex-col">
-                        <Link to={`${PATH.SCHEDULE_TRAINNER}/${path}`}>
+                        <Link to={`${PATH.SCHEDULE_TRAINNER}/${classCode}`}>
                             <Button type="primary" className="w-full mb-3">
                                 Lịch học
                             </Button>
