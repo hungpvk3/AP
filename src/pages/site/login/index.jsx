@@ -91,7 +91,7 @@ const LoginPage = () => {
 
     if (role === "FSST" || role === "FSMG") return <Redirect to={PATH.HOME} />;
     else if (role === "FSAD") return <Redirect to={PATH.ADMIN} />;
-    else if (role === "FSTC") return <Redirect to={PATH.CLASS_TRAINNER} />;
+    else if (role === "FSTC") return <Redirect to={PATH.TRAINNER} />;
     else {
         body = (
             <div className="">

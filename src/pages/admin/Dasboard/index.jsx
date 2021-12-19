@@ -11,8 +11,9 @@ const AdminPage = () => {
         authState,
         dispatchAuth,
         dispatchMajor,
-        majorState: { isLoading, majors },
+        majorState: { isLoading },
     } = useStore();
+    const [majors, setMajors] = useState([]);
     const [isLoad, setIsLoad] = useState(true);
     console.log(majors);
     useEffect(() => {
@@ -43,6 +44,7 @@ const AdminPage = () => {
                     dispatchMajor(
                         actionsMajor.majorActions.get_mojors(response.majors)
                     );
+                    setMajors(response.majors);
                 }
             } catch (error) {
                 console.log(error);
