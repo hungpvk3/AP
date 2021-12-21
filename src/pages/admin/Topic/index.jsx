@@ -17,16 +17,16 @@ const ClassPage = () => {
         isOpen: false,
         isRefesh: false,
     });
-    const [isOpenUpdate, setIsOpenUpdate] = useState({
-        isOpen: false,
-        classUpdate: {},
-        isRefesh: false,
-    });
-    const [isOpenAddStudent, setIsOpenAddStudent] = useState({
-        isOpen: false,
-        classAddStudent: {},
-        isRefesh: false,
-    });
+    // const [isOpenUpdate, setIsOpenUpdate] = useState({
+    //     isOpen: false,
+    //     classUpdate: {},
+    //     isRefesh: false,
+    // });
+    // const [isOpenAddStudent, setIsOpenAddStudent] = useState({
+    //     isOpen: false,
+    //     classAddStudent: {},
+    //     isRefesh: false,
+    // });
 
     console.log(classData);
     useEffect(() => {
@@ -52,17 +52,17 @@ const ClassPage = () => {
         });
     }, []);
 
-    const handleOpenUpdate = useCallback(
-        (classId) => {
-            setIsOpenUpdate({
-                isOpen: true,
-                classUpdate: classData.classes.find(
-                    (cls) => cls._id === classId
-                ),
-            });
-        },
-        [classData.classes]
-    );
+    // const handleOpenUpdate = useCallback(
+    //     (classId) => {
+    //         setIsOpenUpdate({
+    //             isOpen: true,
+    //             classUpdate: classData.classes.find(
+    //                 (cls) => cls._id === classId
+    //             ),
+    //         });
+    //     },
+    //     [classData.classes]
+    // );
 
     const handleClose = useCallback(() => {
         setOpenCreate((pve) => {
@@ -71,13 +71,13 @@ const ClassPage = () => {
                 isOpen: false,
             };
         });
-        setIsOpenUpdate({ isOpen: false, classUpdate: {} });
-        setIsOpenAddStudent((pve) => {
-            return {
-                ...pve,
-                isOpen: false,
-            };
-        });
+        // setIsOpenUpdate({ isOpen: false, classUpdate: {} });
+        // setIsOpenAddStudent((pve) => {
+        //     return {
+        //         ...pve,
+        //         isOpen: false,
+        //     };
+        // });
     }, []);
 
     const handleRefeshData = useCallback(() => {
@@ -130,7 +130,6 @@ const ClassPage = () => {
                             <div key={cls._id}>
                                 <ClassItem
                                     items={cls}
-                                    onOpenUpdate={handleOpenUpdate}
                                     onRefesh={handleRefeshData}
                                 />
                             </div>
