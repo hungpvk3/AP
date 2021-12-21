@@ -1,48 +1,20 @@
 import React, { memo } from "react";
-import { Link } from "react-router-dom";
 import ModalConfim from "../../../../components/modal";
 
 import TooltipUpdate from "../../../../components/tooltip/Update";
 import TooltipDelete from "../../../../components/tooltip/Delete";
-import Class from "../../../../apis/class";
+import Topic from "../../../../apis/topic";
 
-const ClassItem = ({ items, onOpenUpdate, onOpenAddStudent, onRefesh }) => {
+const ClassItem = ({ items, onOpenUpdate, onRefesh }) => {
     console.log("re-render");
     return (
         <div className="t-body text-sm text-gray-700 font-semibold col-span-3 mt-6">
             <div className="hover:bg-gray-100 rounded-lg border border-gray-200">
                 <ul className="grid grid-cols-7 gap-4 transform translate-y-1 pt-2 px-1">
-                    <Link
-                        to={`/admin/class/${items._id}`}
-                        className="col-span-5"
-                    >
-                        <li className=" cursor-pointer capitalize">
-                            Lớp {items?.name}
-                        </li>
-                    </Link>
-
-                    <li>
-                        <TooltipUpdate
-                            title="Thêm sinh viên"
-                            placement="top-end"
-                        >
-                            <svg
-                                onClick={() => onOpenAddStudent(items._id)}
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-6 w-6 ml-10 cursor-pointer"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M10 21h7a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v11m0 5l4.879-4.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242z"
-                                />
-                            </svg>
-                        </TooltipUpdate>
+                    <li className=" cursor-pointer capitalize col-span-6">
+                        Lớp {items?.name}
                     </li>
+
                     <li className="flex items-center justify-between">
                         <TooltipUpdate title="Cập nhật" placement="top-end">
                             <svg
@@ -64,7 +36,7 @@ const ClassItem = ({ items, onOpenUpdate, onOpenAddStudent, onRefesh }) => {
                         <ModalConfim
                             placement="topRight"
                             onDelete={() => {
-                                Class.deleteClass(items?._id);
+                                Topic.deleteTopic(items._id);
                             }}
                             name={items?.name}
                             onRefesh={onRefesh}

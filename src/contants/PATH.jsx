@@ -21,6 +21,7 @@ export const PATH = {
     TRAINNER_PROFILE: "/trainner/profile",
     COURSE_TRAINNER: "/trainner/course",
     SCHEDULE_TRAINNER: "/trainner/schedule",
+    TOPIC_ADMIN: "/admin/topic",
     ADMIN_PROFILE: "/admin/profile",
 };
 
@@ -74,4 +75,9 @@ export const PATH_SCORE = {
 
 export const PATH_SCHEDULE = {
     GET_SCHEDULE_CLASS: "/schedules",
+};
+
+export const PATH_TOPIC = {
+    GUD_TOPICS: "/topics",
+    POST_TOPIC: "/topics/store",
 };

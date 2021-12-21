@@ -1,14 +1,11 @@
 import React, { useCallback, useEffect, useState } from "react";
 
-import Class from "../../../apis/class";
+import Topic from "../../../apis/topic";
 
 import ClassItem from "./components/ClassItem";
 import Plus from "../../../components/plus";
 import PlusItem from "../../../components/plus/components/PlusItem";
 import CreateClass from "./components/CreateClass";
-import UpdateClass from "./components/UpdateClass";
-import AddStudent from "./components/AddStudent";
-import Pagination from "../../../components/pagination";
 
 const ClassPage = () => {
     const [classData, setClassData] = useState({
@@ -30,38 +27,22 @@ const ClassPage = () => {
         classAddStudent: {},
         isRefesh: false,
     });
-    const [paginations, setPagination] = useState({
-        _page: 1,
-        _totalRow: 1,
-        _limit: 5,
-    });
-    const [filterClass, setFilterClass] = useState({
-        id: null,
-        _page: 1,
-        _limit: 6,
-    });
 
     console.log(classData);
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await Class.getClasses(
-                    filterClass._page,
-                    filterClass._limit
-                );
+                const response = await Topic.getTopics();
 
-                setClassData({ isLoading: false, classes: response.classes });
-                setPagination(response.pagination);
+                setClassData({ isLoading: false, classes: response });
             } catch (error) {
                 console.log(error);
             }
         };
 
         fetchData();
-    }, [isOpenCreate.isRefesh, filterClass]);
-    const handlePageChange = (newPage) => {
-        setFilterClass({ ...filterClass, _page: newPage });
-    };
+    }, [isOpenCreate.isRefesh]);
+
     const handleOpenCreate = useCallback(() => {
         setOpenCreate((pve) => {
             return {
@@ -78,20 +59,6 @@ const ClassPage = () => {
                 classUpdate: classData.classes.find(
                     (cls) => cls._id === classId
                 ),
-            });
-        },
-        [classData.classes]
-    );
-
-    const handleOpenAddStudent = useCallback(
-        (classId) => {
-            setIsOpenAddStudent((pre) => {
-                return {
-                    isOpen: true,
-                    classAddStudent: classData.classes.find(
-                        (cls) => cls._id === classId
-                    ),
-                };
             });
         },
         [classData.classes]
@@ -145,9 +112,8 @@ const ClassPage = () => {
                 <div className="mt-14">
                     <div className="t-head text-md text-white font-semibold col-span-3 shadow-lg">
                         <ul className="flex items-center grid grid-cols-7 gap-4 p-3 rounded-t-xl bg-gray-500">
-                            <li className="col-span-5">Name</li>
+                            <li className="col-span-6">Name</li>
 
-                            <li className="">Thêm sinh viên</li>
                             <li className="flex items-center justify-between">
                                 <span>Cập nhật</span>
                                 <span>Xoá</span>
@@ -165,7 +131,6 @@ const ClassPage = () => {
                                 <ClassItem
                                     items={cls}
                                     onOpenUpdate={handleOpenUpdate}
-                                    onOpenAddStudent={handleOpenAddStudent}
                                     onRefesh={handleRefeshData}
                                 />
                             </div>
@@ -180,25 +145,7 @@ const ClassPage = () => {
                     onClose={handleClose}
                     onRefesh={handleRefeshData}
                 />
-
-                <UpdateClass
-                    isOpen={isOpenUpdate.isOpen}
-                    selectClass={isOpenUpdate.classUpdate}
-                    onClose={handleClose}
-                    onRefesh={handleRefeshData}
-                />
-
-                <AddStudent
-                    isOpen={isOpenAddStudent.isOpen}
-                    classId={isOpenAddStudent.classAddStudent._id}
-                    onClose={handleClose}
-                    onRefesh={handleRefeshData}
-                />
             </div>
-            <Pagination
-                pagination={paginations ? paginations : {}}
-                onPageChange={handlePageChange}
-            />
         </div>
     );
 };

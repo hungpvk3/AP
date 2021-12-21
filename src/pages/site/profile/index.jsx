@@ -63,6 +63,7 @@ const ProfilePage = () => {
                     })
                 );
                 setIsLoading(false);
+                setIsEdit(false);
             }
         } catch (error) {
             console.log(error);

@@ -25,6 +25,7 @@ import ManagerUserPage from "./pages/admin/User";
 import ManagerClassPage from "./pages/admin/Class";
 import ManagerScore from "./pages/admin/Score";
 import ManagerClassDetailPage from "./pages/admin/Class/components/DetailClass";
+import TopicPage from "./pages/admin/Topic";
 
 import ManagerCoursePage from "./pages/manager/Course";
 import ManagerCategoryPage from "./pages/manager/category";
@@ -124,6 +125,11 @@ function App() {
                                 exact
                                 path={PATH.ADMIN_CLASS}
                                 component={ManagerClassPage}
+                            />
+                            <Route
+                                exact
+                                path={PATH.TOPIC_ADMIN}
+                                component={TopicPage}
                             />
                             <Route
                                 exact

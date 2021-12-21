@@ -164,9 +164,6 @@ const Header = () => {
                                     }
                                     content={
                                         <div>
-                                            <p className="text-gray-600 font-medium border-gray-300 cursor-pointer hover:text-black">
-                                                Thông tin cá nhân
-                                            </p>
                                             <p
                                                 className="text-gray-600 font-medium border-gray-300 cursor-pointer hover:text-black"
                                                 onClick={handleLogout}

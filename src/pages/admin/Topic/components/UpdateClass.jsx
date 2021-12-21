@@ -139,7 +139,7 @@ function UpdateClass({ isOpen, selectClass, onClose, onRefesh }) {
                     <div className="m-10 bg-white h-4/5 p-10 rounded-2xl">
                         <div className="text-gradient w-max">
                             <p className="font-bold text-2xl text-white pt-2 pl-14">
-                                Cập nhật lớp học
+                                Tạo mới môn học
                             </p>
                         </div>
 

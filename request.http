@@ -1,6 +1,11 @@
-GET https://ap-sever.herokuapp.com/class
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTdjZWZiOWI2ODI5MzE5OTY0ZGVkMTciLCJpYXQiOjE2MzY3Mjc4MzF9.16xWSBBNNoHdCwSnYtBoFgsqnnujvtyBknk6Ry6c_9c
+DELETE   https://ap-sever.herokuapp.com/topics/61c0282a38a7c7b65e5a69f9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWEzM2U2ZjVjMThjMTQ3YmM2NjIwY2IiLCJpYXQiOjE2Mzk5NzE3MTR9.n_UVQ20GKLI5isl8qsYQQAc2XFc-HFhU0H9Nf-XUwvo
 Content-Type: application/json
+
+# {
+#     "name": "lisdsdss",
+#     "description": "alo alo"
+# }
 
 ###
 GET https://ap-sever.herokuapp.com/users?page=1&limit=8
@@ -90,8 +95,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWEzM2U2Z
 Content-Type: application/json
 
 ###
-GET  https://ap-sever.herokuapp.com/schedules/61821b32e2c474ccfd471a7c
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTdjZWZiOWI2ODI5MzE5OTY0ZGVkMTciLCJpYXQiOjE2MzY3Mjc4MzF9.16xWSBBNNoHdCwSnYtBoFgsqnnujvtyBknk6Ry6c_9c
+GET  https://ap-sever.herokuapp.com/schedules/classCode/61821b32e2c474ccfd471a7c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWEzM2U2ZjVjMThjMTQ3YmM2NjIwY2IiLCJpYXQiOjE2Mzk5NzE3MTR9.n_UVQ20GKLI5isl8qsYQQAc2XFc-HFhU0H9Nf-XUwvo
 
 ###
 GET  https://ap-sever.herokuapp.com/users/search?keySearch=huan

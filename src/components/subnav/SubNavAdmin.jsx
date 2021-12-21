@@ -131,6 +131,26 @@ const SubNavAdmin = () => {
                     </li>
                 </Link>
 
+                <Link to={PATH.TOPIC_ADMIN}>
+                    <li
+                        className={`${
+                            twoEleResult === "topic"
+                                ? "active"
+                                : "hover:text-black hover:bg-white rounded-xl"
+                        } text-gray-700
+                    flex flex-col items-center justify-center w-16 h-16 mt-1.5 cursor-pointer rounded-xl`}
+                    >
+                        <Icon className="w-5 h-5 mt-3">
+                            <path
+                                fillRule="evenodd"
+                                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                                clipRule="evenodd"
+                            />
+                        </Icon>
+                        <p className="text-xs mt-1">Topic</p>
+                    </li>
+                </Link>
+
                 <Link to={PATH.ADMIN_PROFILE}>
                     <li
                         className={`${
